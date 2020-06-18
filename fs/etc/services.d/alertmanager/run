@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv ash
+
+cd /alertmanager
+
+exec runas /bin/alertmanager --config.file=/config/alertmanager.yml --storage.path=/alertmanager $ALERTMANAGER_ARGS
