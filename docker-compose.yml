@@ -1,6 +1,12 @@
 version: "3.7"
 services:
-  $$IMAGE_NAME$$:
+  prometheus-alertmanager:
     build: .
-    image: homecentr/$$IMAGE_NAME$$
+    image: homecentr/prometheus-alertmanager:local
+    environment:
+      ALERTMANAGER_ARGS: "--log.level=debug"
+    volumes:
+      - ./example:/config
+    ports:
+      - 9093:9093
     restart: unless-stopped
