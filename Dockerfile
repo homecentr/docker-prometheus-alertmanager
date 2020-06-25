@@ -1,6 +1,6 @@
 FROM prom/alertmanager:v0.21.0 as original
 
-FROM homecentr/base:2.4.0-alpine
+FROM homecentr/base:2.4.3-alpine
 
 ENV ALERTMANAGER_ARGS=""
 
